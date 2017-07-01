@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="ISO-8859-2"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="projekt" type="projekt-typ"/> 
+  <xs:element name="edycja" type="edycja-type"/> 
+  <xs:element name="Wersy_dnia" type="Wersy_dnia-type"/> 
+  <xs:element name="Mistrzowie" type="Mistrzowie-type"/>  
+  <xs:element name="Koncerty" type="Koncerty-type"/>  
+  <xs:element name="Wykonawcy" type="Wykonawcy-type"/>
+  <xs:element name="Informacje" type="Informacje-type"/>  
+  <xs:element name="Kontakt" type="Kontakt-type"/> 
+  <xs:element name="autor" type="autor-type"/>
+  <xs:element name="data" type="data-type"/>
+  <xs:element name="wejscie" type="wejscie-type"/>
+  <xs:element name="czas" type="czas-type"/>
+  <xs:attribute name="popularność" type="shortString-type"/>
+	
+ 	
+  
+<xs:complexType name="projekt-typ">
+    <xs:sequence>
+      <xs:element ref="autor"/>		  
+	  <xs:element ref="Wersy_dnia"/>
+	  <xs:element ref="Mistrzowie"/>
+	  <xs:element ref="Koncerty"/>	  
+      <xs:element ref="Wykonawcy"/>
+	  <xs:element ref="Kontakt" /> 	  
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:simpleType name="data-type">
+	<xs:restriction base="xs:date">		
+	</xs:restriction>
+  </xs:simpleType>
+  
+	<xs:complexType name="autor-type">		
+        <xs:sequence>
+          <xs:element name="imie" type="xs:string"/>
+          <xs:element name="nazwisko" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+  
+  <xs:simpleType name="Informacje-type">
+  <xs:restriction base="xs:string">
+		<xs:minLength value="1"/>
+		<xs:maxLength value="1000"/>
+	</xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="edycja-type">
+		<xs:restriction base="xs:int">
+		<xs:minInclusive value="0" />		
+		</xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="czas-type">
+		<xs:restriction base="xs:time">			
+		</xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="wejscie-type">
+	<xs:restriction base="xs:token">
+		<xs:enumeration value="Darmowe" />
+		<xs:enumeration value="Płatne" />		
+	</xs:restriction>
+</xs:simpleType>
+  
+  
+ <xs:complexType name="Wersy_dnia-type">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element ref="Informacje" minOccurs="0"/>
+			<xs:element name="wers" type="xs:string"/>			
+		</xs:choice>		
+  </xs:complexType>
+  
+   
+   <xs:complexType name="Mistrzowie-type">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element ref="Informacje" minOccurs="0"/>
+			<xs:element name="zawodnik" type="zawodnik-type"/>			
+		</xs:choice>
+  </xs:complexType>
+  
+  <xs:complexType name="zawodnik-type">
+		<xs:sequence>
+			<xs:element name="nazwa" type="xs:string" maxOccurs="unbounded"/>			
+		</xs:sequence>
+		<xs:attribute name="rok" type="rok-type" use="required"/>
+		<xs:attribute name="dzika_karta" type="dzika_karta-type" use="required"/>		
+	</xs:complexType>
+	
+  <xs:simpleType name="rok-type">
+		<xs:restriction base="xs:int">
+			<xs:minInclusive value="2003" />
+			<xs:maxInclusive value="2200" />
+		</xs:restriction>
+</xs:simpleType>
+  
+  	<xs:simpleType name="dzika_karta-type">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="tak|nie"/>
+		</xs:restriction>
+	</xs:simpleType>
+  
+  
+  
+  <xs:complexType name="Koncerty-type">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element ref="Informacje" minOccurs="0"/>
+			<xs:element name="festival" type="festivalklub-type"/>
+			<xs:element name="klub" type="festivalklub-type"/>
+		</xs:choice>
+  </xs:complexType> 
+  
+  <xs:complexType name="festivalklub-type">
+		<xs:sequence>
+			<xs:element name="event" type="xs:string" maxOccurs="unbounded"/>
+			<xs:element name="miejsce" type="xs:string"/>				
+			<xs:element ref="data" /> 
+			<xs:element ref="czas" /> 
+			<xs:element ref="edycja" /> 
+			<xs:element ref="wejscie" /> 			
+			<xs:element name="bilet" type="bilet-type" maxOccurs="unbounded"/>
+			<xs:element name="szatnia" type="szatnia-type" maxOccurs="unbounded"/>
+			<xs:element name="razem" type="razem-type" maxOccurs="unbounded"/>
+			<xs:element name="eventID" type="eventID-type" />				
+		</xs:sequence>
+		<xs:attribute ref="popularność"/>
+		<xs:attribute name="zasięg" type="shortString-type" use="required"/>
+		<xs:attribute name="rozmiar" type="shortString-type" use="required"/>
+	</xs:complexType>
+  
+	<xs:simpleType name="bilet-type">
+	<xs:restriction base="xs:integer">
+		<xs:minInclusive value="1" />
+		<xs:maxInclusive value="70" />
+	</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="szatnia-type">
+	<xs:restriction base="xs:integer">
+		<xs:minInclusive value="1" />
+		<xs:maxInclusive value="20" />
+	</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="razem-type">
+	<xs:union memberTypes=" bilet-type szatnia-type" />
+	</xs:simpleType>
+	
+	<xs:simpleType name="eventID-type">
+	<xs:restriction>
+		<xs:simpleType>
+			<xs:list>
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="1" />
+						<xs:maxInclusive value="99" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:list>
+		</xs:simpleType>
+		<xs:length value="6" />
+	</xs:restriction>
+	</xs:simpleType>
+
+  <xs:complexType name="Wykonawcy-type">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element ref="Informacje" minOccurs="0"/>
+			<xs:element name="muzycy" type="muzycyproducenci-type"/>
+			<xs:element name="producenci" type="muzycyproducenci-type"/>
+		</xs:choice>
+  </xs:complexType> 
+  
+	<xs:complexType name="muzycyproducenci-type">
+		<xs:sequence>
+			<xs:element name="nazwa" type="nazwa-type" maxOccurs="unbounded"/>
+			<xs:element name="wytwornia" type="shortString-type"/>
+			<xs:element name="wystepy" type="wystepy-type" minOccurs="0"/>
+			<xs:element name="opis" type="opis-type" minOccurs="3" maxOccurs="unbounded"/>
+			<xs:element name="zdjecie" type="zdjecie-type" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="linki" type="linki-type" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="data" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="gatunek" type="shortString-type" use="required"/>
+		<xs:attribute name="dziedzina" type="freestyle_studio" default="freestyle"/>
+		<xs:attribute name="aktywny_na_scenie" type="tak_nie" use="required"/>
+		<xs:attribute ref="popularność"/>
+	</xs:complexType>
+	
+	<xs:complexType name="nazwa-type">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="artysta" type="shortString-type" use="required"/>
+			</xs:extension>			
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:complexType name="wystepy-type">
+		<xs:sequence>
+			<xs:element name="kolaboracje" type="kolaboracje-type" maxOccurs="unbounded"/>
+			<xs:element name="wydarzenie" type="xs:string" maxOccurs="unbounded"/>
+			<xs:element name="pochodzenie" type="pochodzenie-type"/>
+		</xs:sequence>		
+	</xs:complexType>
+	
+	<xs:complexType name="kolaboracje-type">
+		<xs:sequence>
+			<xs:element name="duet" type="xs:string" maxOccurs="unbounded"/>
+			<xs:element name="grupa" type="xs:string" maxOccurs="unbounded"/>			
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="opis-type">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="czego_dotyczy" type="shortString-type"/>
+			</xs:extension>			
+		</xs:simpleContent>		
+	</xs:complexType>
+	
+	<xs:complexType name="linki-type">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="href" type="xs:anyURI" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>	
+	</xs:complexType>
+	
+	<xs:complexType name="zdjecie-type">
+		<xs:attribute name="zrodlo" type="xs:string"/>
+	</xs:complexType>
+	
+	<xs:complexType name="pochodzenie-type">
+		<xs:attribute name="jakie">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="polskie|zagraniczne"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>	
+
+	<xs:simpleType name="freestyle_studio">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="freestyle|studio"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="tak_nie">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="tak|nie"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="shortString-type">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="Kontakt-type">
+		<xs:sequence>
+			<xs:element ref="autor" minOccurs="0"/>
+			<xs:element name="wydział" type="xs:string"/>
+			<xs:element name="telefon" type="xs:int"/>
+			<xs:element name="mail" type="xs:string"/>
+		</xs:sequence>
+  </xs:complexType> 	
+</xs:schema>

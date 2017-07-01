@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="ISO-8859-2"?>
+<projekt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="Freestyle.xsd"> 
+   <autor>
+   <imie>Bartlomiej</imie>
+   <nazwisko>Borzyszkowski</nazwisko>
+   
+   </autor> 
+  <Wersy_dnia> 
+		<Informacje>Wybrane wersy dzisiejszego dnia!</Informacje>	
+		<wers> "a propos pracy: powiem Tobie jedno, kocie - wygrasz ze mną jak Syzyf przejdzie na bezrobocie!"</wers>
+		<wers> "Wpadam tu i znow bujam tym klubem. Jaki ogrodnik? Rymuje bez ogrodek!"</wers>
+		<wers> "Rapuje cały czas, mam talent. On ma punche z komisu - uzywane."</wers>   
+  </Wersy_dnia>
+  
+  <Mistrzowie>
+	<Informacje>Najlepsi wolnostylowcy w kraju!</Informacje>
+	<zawodnik rok="2015" dzika_karta="nie">
+	<nazwa>Edzio</nazwa>
+	</zawodnik>
+	<zawodnik rok="2014" dzika_karta="tak">
+	<nazwa>Edzio</nazwa>
+	</zawodnik>
+	<zawodnik rok="2013" dzika_karta="tak">
+	<nazwa>Szyderca</nazwa>
+	</zawodnik>
+	<zawodnik rok="2012" dzika_karta="nie">
+	<nazwa>Czeski</nazwa>
+	</zawodnik>	
+  </Mistrzowie>
+  
+  <Koncerty>
+	<Informacje>Dowiedz się wiecej na temat hip-hopu!</Informacje>
+	<festival popularność="rosnąca" zasięg="ogólnopolski" rozmiar="olbrzymi">
+	<event>Street Art Festival</event>	
+	<miejsce>Gdansk</miejsce>	
+	<data> 2017-11-02</data>
+	<czas>15:30:00</czas>
+	<edycja>5</edycja>
+	<wejscie>Platne</wejscie>	
+	<bilet>50</bilet>
+	<szatnia>3</szatnia>
+	<razem>53</razem>
+	<eventID>36 5 73 5 46 37</eventID>
+	</festival>
+	<klub popularność="rosnąca" zasięg="lokalny" rozmiar="kameralny">
+	<event>Prosto Trójmiasto Sfinks700</event>	
+	<miejsce>Sopot</miejsce>		
+	<data> 2017-08-03</data>
+	<czas>20:30:00</czas>
+	<edycja>2</edycja>
+	<wejscie>Płatne</wejscie>
+	<bilet>45</bilet>
+	<szatnia>5</szatnia>
+	<razem>50</razem>
+	<eventID>1 27 13 4 5 48</eventID>
+	</klub>
+  </Koncerty>
+  
+  <Wykonawcy>	
+	<Informacje>Przykładowi wykonawcy muzyczni</Informacje>
+    <muzycy gatunek="rap" dziedzina="freestyle" aktywny_na_scenie="tak" popularność="rosnąca">	
+      <nazwa artysta="pseudonim">Edzio</nazwa>
+      <nazwa artysta="prawdziwie">Piotr Bylina</nazwa>
+      <wytwornia>Bozon Records</wytwornia>
+      <wystepy>
+		<kolaboracje>
+		<duet>Edzio/Filipek</duet>
+		<grupa>Microphone Masters</grupa>
+		</kolaboracje>
+        <wydarzenie>Wielka Bitwa Warszawska</wydarzenie>
+        <wydarzenie>Hip-hop Kemp</wydarzenie>
+        <wydarzenie>Bitwa o Mokotów</wydarzenie>
+        <wydarzenie>Bitwa o Stocznię</wydarzenie>
+        <wydarzenie>Bitwa o Pitos</wydarzenie>
+        <wydarzenie>Cypher Time vol. 5</wydarzenie>
+        <wydarzenie>Street Art Festival</wydarzenie>
+        <pochodzenie jakie="polskie" />		
+      </wystepy>
+      <opis czego_dotyczy="Ogólny">
+		Dwukrotny mistrz WBW. Po raz pierwszy pas zdobył po pokonaniu Jędrzeja w 2014 roku. Jego obrona miała miejsce w 2015 roku po bardzo wyrównanym finale z Pejterem.
+        </opis>
+      <opis czego_dotyczy="Szczegóły">
+        Słynie z unikatowych wersów, które rzadko bywają wcześniej planowane. Często nawiązuje do mitologii greckiej, a także historii i literatury.
+      </opis>
+      <opis czego_dotyczy="Technika">
+        Potrafi pływać po podkładach w wyjątkowy sposób. Jego znakiem rozpoznawyczym są samplowane bity. Najlepiej odnajduje się w trueschoolu.
+      </opis>
+      <zdjecie zrodlo="Gfx/ZdjecieEdzio1.png"/>
+      <zdjecie zrodlo="Gfx/ZdjecieEdzio2.png"/>
+      <zdjecie zrodlo="Gfx/ZdjecieEdzio3.png"/>
+      <zdjecie zrodlo="Gfx/ZdjecieEdzio4.png"/>
+      <linki href="https://www.facebook.com/Edzio-242914792742471/?fref=ts">https://www.facebook.com/Edzio-242914792742471/?fref=ts</linki>
+      <linki href="http://genius.com/Edzio">http://genius.com/Edzio</linki>
+      <linki href="http://www.popkiller.pl/tagi/edzio">http://www.popkiller.pl/tagi/edzio</linki>
+      <linki href="http://bozonrecords.pl/pl/artysci/edzio/">http://bozonrecords.pl/pl/artysci/edzio/</linki>   
+	  <data>2016-11-29</data>
+   </muzycy >
+
+    <muzycy gatunek="rap" dziedzina="studio" aktywny_na_scenie="tak" popularność="rosnąca">
+      <nazwa artysta="pseudonim">Sokół</nazwa>
+      <nazwa artysta="prawdziwie">Wojciech Sosnowski</nazwa>
+      <wytwornia>Prosto</wytwornia>
+      <wystepy>
+		<kolaboracje>
+		<duet>Sokół/Marysia Starosta</duet>
+		<grupa>ZIP Skład</grupa>
+		</kolaboracje>		
+        <wydarzenie>FESTXVAL PROSTO Torwar Warszawa</wydarzenie>
+        <wydarzenie>Hip-hop Kemp</wydarzenie>
+        <wydarzenie>Street Art Festival</wydarzenie>
+        <wydarzenie>Wrocław Hip Hop Festival</wydarzenie>
+		<wydarzenie>Street Art Festival</wydarzenie>
+		<wydarzenie>TOOBI Summer Fest</wydarzenie>
+		<wydarzenie>Everytap x World Wide Warsaw: Sokół i Marysia</wydarzenie>
+        <pochodzenie jakie="polskie" />
+      </wystepy>
+      <opis czego_dotyczy="Ogólny">
+        Załozyciel i współwłaściciel wytwórni płytowej "Prosto". Znany z występów w grupie muzycznej WWO oraz ZIP Skład, a także z duetu Sokół/Marysia Starosta. Członek Akademii Fonograficznej ZPAV oraz dziennikarz muzyczny.
+      </opis>
+      <opis czego_dotyczy="Szczegóły">
+        Nazywany narratorem, gdzyż pisze szczere i proste wersy, z perspektywy osoby postronnej opisywanych wydarzeń. Unika klasycznych puncheline'ów i wyznaje prawdziwie klasyczny, oldschoolowy styl.
+      </opis>
+      <opis czego_dotyczy="Technika">
+        Proste i dosadne flow. Nie jest to najlepszy technicznie muzyk, aczkolwiek zapracował na ogromny szacunek u słuchaczy za współtworzenie polskiej sceny oraz ogromny wkład w kulturę.
+      </opis>
+      <zdjecie zrodlo="Gfx/ZdjecieSokol1.png"></zdjecie>
+      <zdjecie zrodlo="Gfx/ZdjecieSokol2.png"></zdjecie>
+      <zdjecie zrodlo="Gfx/ZdjecieSokol3.png"></zdjecie>
+      <zdjecie zrodlo="Gfx/ZdjecieSokol4.png"></zdjecie>
+      <linki href="https://pl.wikipedia.org/wiki/Sok%C3%B3%C5%82_(raper)">https://pl.wikipedia.org/wiki/Sok%C3%B3%C5%82_(raper)</linki>
+      <linki href="http://prosto.pl/label/prosto/artists/sokol-i-marysia-starosta/">http://prosto.pl/label/prosto/artists/sokol-i-marysia-starosta/</linki>
+      <linki href="https://www.facebook.com/sokolimarysiastarosta/">https://www.facebook.com/sokolimarysiastarosta/</linki>
+      <linki href="http://genius.com/artists/Soko-pl">http://genius.com/artists/Soko-pl</linki>
+	  <data>2016-11-28</data>
+    </muzycy>
+
+    <producenci gatunek="rap" dziedzina="studio" aktywny_na_scenie="tak" popularność="malejąca">
+      <nazwa artysta="pseudonim">NOON</nazwa>
+      <nazwa artysta="prawdziwie">Mikołaj Bugajak</nazwa>
+      <wytwornia>Nowe Nagrania</wytwornia>
+      <wystepy>
+		<kolaboracje>
+		<duet>Pezet/NOON</duet>
+		<grupa>Grammatik</grupa>
+		</kolaboracje>		
+        <wydarzenie>Grammatik / Światła Miasta / Warszawa</wydarzenie>
+        <wydarzenie>HV/NOON</wydarzenie>
+        <wydarzenie>Pitu Pitu Warszawa</wydarzenie>        
+		<wydarzenie>Basen Artystyczny / Opera OFF </wydarzenie>
+		<wydarzenie>Everytap x World Wide Warsaw: Sokół i Marysia</wydarzenie>
+        <pochodzenie jakie="polskie" />
+      </wystepy>
+      <opis czego_dotyczy="Ogólny">
+        NOON ma na koncie przynajmniej kilka płyt, które zasłużyły na miano klasycznych. Słynący z nieszablonowego podejścia do muzyki rozpoczął karierę jako producent muzyczny, tworząc sukces takich artystów jak Grammatik oraz Pezet.
+		</opis>  
+	  <opis czego_dotyczy="Szczegóły">
+		Muzyk i kompozytor, instrumentalista, a także producent muzyczny i inżynier dźwięku, specjalista z zakresu masteringu. Właściciel studia 33 Obroty oraz współzałożyciel studia S-33.
+        </opis>
+      <opis czego_dotyczy="Technika">
+		Jeden z najwybitniejszych hip-hopowych producentów. Droga od instrumentalnego rapu, przez muzykę elektroniczną, aż do kompozycji akustycznych odbyła się płynnie głównie za sprawą charakterystycznego brzmienia, które jest jego wizytówką.
+         </opis>
+      <zdjecie zrodlo="Gfx/ZdjecieNOON1.png"></zdjecie>
+      <zdjecie zrodlo="Gfx/ZdjecieNOON2.png"></zdjecie>
+      <zdjecie zrodlo="Gfx/ZdjecieNOON3.png"></zdjecie>
+      <zdjecie zrodlo="Gfx/ZdjecieNOON4.png"></zdjecie>
+	  <linki href="https://pl.wikipedia.org/wiki/Noon">https://pl.wikipedia.org/wiki/Noon</linki>
+      <linki href="https://www.facebook.com/pg/MikolajBugajak/about/?ref=page_internal">https://www.facebook.com/pg/MikolajBugajak/about/?ref=page_internal</linki>
+      <linki href="http://www.asfalt.pl/noon.html">http://www.asfalt.pl/noon.html</linki>
+      <linki href="http://www.newsweek.pl/kultura/wywiad-z-noon-em-wciaz-nie-odnalazlem-tego-czego-szukam-nesweek-pl,artykuly,354006,1.html">http://www.newsweek.pl/kultura/wywiad-z-noon-em-wciaz-nie-odnalazlem-tego-czego-szukam-nesweek-pl,artykuly,354006,1.html</linki>
+	  <data>2016-11-27</data>
+   </producenci>
+  </Wykonawcy>
+  
+  <Kontakt>
+	<autor>   
+	<imie>Bartłomiej</imie>
+	<nazwisko>Borzyszkowski</nazwisko>
+	</autor>
+	<wydział> WETI </wydział>
+	<telefon> 661502301 </telefon>
+	<mail> bartek.borzyszkowski@wp.pl </mail>
+  </Kontakt>
+  
+  
+</projekt>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="iso-8859-2"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="projekt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="autor">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="imie" type="xs:string" />
+              <xs:element name="nazwisko" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Wersy_dnia">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Informacje" type="xs:string" />
+              <xs:element maxOccurs="unbounded" name="wers" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Mistrzowie">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Informacje" type="xs:string" />
+              <xs:element maxOccurs="unbounded" name="zawodnik">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="nazwa" type="xs:string" />
+                  </xs:sequence>
+                  <xs:attribute name="rok" type="xs:unsignedShort" use="required" />
+                  <xs:attribute name="dzika_karta" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Koncerty">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Informacje" type="xs:string" />
+              <xs:element name="festival">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="event" type="xs:string" />
+                    <xs:element name="miejsce" type="xs:string" />
+                    <xs:element name="data" type="xs:date" />
+                    <xs:element name="czas" type="xs:time" />
+                    <xs:element name="edycja" type="xs:unsignedByte" />
+                    <xs:element name="wejscie" type="xs:string" />
+                    <xs:element name="bilet" type="xs:unsignedByte" />
+                    <xs:element name="szatnia" type="xs:unsignedByte" />
+                    <xs:element name="razem" type="xs:unsignedByte" />
+                    <xs:element name="eventID" type="xs:string" />
+                  </xs:sequence>
+                  <xs:attribute name="popularność" type="xs:string" use="required" />
+                  <xs:attribute name="zasięg" type="xs:string" use="required" />
+                  <xs:attribute name="rozmiar" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="klub">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="event" type="xs:string" />
+                    <xs:element name="miejsce" type="xs:string" />
+                    <xs:element name="data" type="xs:date" />
+                    <xs:element name="czas" type="xs:time" />
+                    <xs:element name="edycja" type="xs:unsignedByte" />
+                    <xs:element name="wejscie" type="xs:string" />
+                    <xs:element name="bilet" type="xs:unsignedByte" />
+                    <xs:element name="szatnia" type="xs:unsignedByte" />
+                    <xs:element name="razem" type="xs:unsignedByte" />
+                    <xs:element name="eventID" type="xs:string" />
+                  </xs:sequence>
+                  <xs:attribute name="popularność" type="xs:string" use="required" />
+                  <xs:attribute name="zasięg" type="xs:string" use="required" />
+                  <xs:attribute name="rozmiar" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Wykonawcy">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Informacje" type="xs:string" />
+              <xs:element maxOccurs="unbounded" name="muzycy">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="nazwa">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="artysta" type="xs:string" use="required" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="wytwornia" type="xs:string" />
+                    <xs:element name="wystepy">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="kolaboracje">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="duet" type="xs:string" />
+                                <xs:element name="grupa" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element maxOccurs="unbounded" name="wydarzenie" type="xs:string" />
+                          <xs:element name="pochodzenie">
+                            <xs:complexType>
+                              <xs:attribute name="jakie" type="xs:string" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element maxOccurs="unbounded" name="opis">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="czego_dotyczy" type="xs:string" use="required" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element maxOccurs="unbounded" name="zdjecie">
+                      <xs:complexType>
+                        <xs:attribute name="zrodlo" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element maxOccurs="unbounded" name="linki">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="href" type="xs:string" use="required" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="data" type="xs:date" />
+                  </xs:sequence>
+                  <xs:attribute name="gatunek" type="xs:string" use="required" />
+                  <xs:attribute name="dziedzina" type="xs:string" use="required" />
+                  <xs:attribute name="aktywny_na_scenie" type="xs:string" use="required" />
+                  <xs:attribute name="popularność" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="producenci">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="nazwa">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="artysta" type="xs:string" use="required" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="wytwornia" type="xs:string" />
+                    <xs:element name="wystepy">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="kolaboracje">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="duet" type="xs:string" />
+                                <xs:element name="grupa" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element maxOccurs="unbounded" name="wydarzenie" type="xs:string" />
+                          <xs:element name="pochodzenie">
+                            <xs:complexType>
+                              <xs:attribute name="jakie" type="xs:string" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element maxOccurs="unbounded" name="opis">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="czego_dotyczy" type="xs:string" use="required" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element maxOccurs="unbounded" name="zdjecie">
+                      <xs:complexType>
+                        <xs:attribute name="zrodlo" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element maxOccurs="unbounded" name="linki">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="href" type="xs:string" use="required" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="data" type="xs:date" />
+                  </xs:sequence>
+                  <xs:attribute name="gatunek" type="xs:string" use="required" />
+                  <xs:attribute name="dziedzina" type="xs:string" use="required" />
+                  <xs:attribute name="aktywny_na_scenie" type="xs:string" use="required" />
+                  <xs:attribute name="popularność" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Kontakt">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="autor">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="imie" type="xs:string" />
+                    <xs:element name="nazwisko" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="wydział" type="xs:string" />
+              <xs:element name="telefon" type="xs:unsignedInt" />
+              <xs:element name="mail" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
